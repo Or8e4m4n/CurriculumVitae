@@ -1,0 +1,47 @@
+/* #information .item:hover article,
+#additional .item:hover article{
+    background-color:lightyellow;
+} */
+
+/* article:hover {
+    background-color: orange !important;
+} */
+
+
+article {
+    text-align: left;
+    & + article { margin-top: 10px; }
+}
+
+section + section{
+    margin-top: 20px;
+}
+
+#key-areas,
+#intrapersonal-skills,
+#interests {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+        grid-row-gap: 10px;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        & .item {
+            display: flex;
+            flex-direction: column;
+            font-weight: 500;    
+            & > :nth-child(2) { 
+                font-style: italic;
+                &::before { content: "("; }
+                &::after { content: ")"; }
+            }
+        }
+    }
+}
+
+/* https://www.billerickson.net/css-grid-center-last-item/ */
+
+#key-areas .container > .item { font-weight: 500; }
+
+// #interests .container > .item::first-letter { text-transform: uppercase; }

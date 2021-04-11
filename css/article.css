@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* #information .item:hover article,
+#additional .item:hover article{
+    background-color:lightyellow;
+} */
+/* article:hover {
+    background-color: orange !important;
+} */
+article {
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 5px 10px #EAEAEA;
+          box-shadow: 10px 5px 10px #EAEAEA;
+}
+article + article {
+  margin-top: 20px;
+}
+
+section + section {
+  margin-top: 20px;
+}
+
+#information > #key-areas > article, #information > #interpersonal-skills > article, #information > #intrapersonal-skills > article, #information > #interests > article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+  grid-row-gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+#information > #key-areas > article > .item, #information > #interpersonal-skills > article > .item, #information > #intrapersonal-skills > article > .item, #information > #interests > article > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+  text-align: center;
+}
+#information > #key-areas > article > .item > .details, #information > #interpersonal-skills > article > .item > .details, #information > #intrapersonal-skills > article > .item > .details, #information > #interests > article > .item > .details {
+  display: inline;
+  font-style: italic;
+}
+#information > #key-areas > article > .item > .details::before, #information > #interpersonal-skills > article > .item > .details::before, #information > #intrapersonal-skills > article > .item > .details::before, #information > #interests > article > .item > .details::before {
+  content: "(";
+}
+#information > #key-areas > article > .item > .details::after, #information > #interpersonal-skills > article > .item > .details::after, #information > #intrapersonal-skills > article > .item > .details::after, #information > #interests > article > .item > .details::after {
+  content: ")";
+}
+
+#information > #technical-skills > article, #information > #linguistic-skills > article {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+  grid-template-columns: 225px auto;
+  grid-row-gap: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#information > #technical-skills > article > .key, #information > #linguistic-skills > article > .key {
+  text-align: right;
+  font-weight: 600;
+}
+#information > #technical-skills > article > .key::after, #information > #linguistic-skills > article > .key::after {
+  content: " – ";
+  margin-left: -5px;
+  font-weight: 100;
+  white-space: pre;
+}
+#information > #technical-skills > article > .content:nth-child(2n), #information > #linguistic-skills > article > .content:nth-child(2n) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: left;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item, #information > #linguistic-skills > article > .content:nth-child(2n) > .item {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item:not(:last-child)::after, #information > #linguistic-skills > article > .content:nth-child(2n) > .item:not(:last-child)::after {
+  content: ", ";
+  /* margin-left:-5px; */
+  white-space: pre;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item > .key, #information > #linguistic-skills > article > .content:nth-child(2n) > .item > .key {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item > .details, #information > #linguistic-skills > article > .content:nth-child(2n) > .item > .details {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-style: italic;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item > .details::before, #information > #linguistic-skills > article > .content:nth-child(2n) > .item > .details::before {
+  content: " (";
+  white-space: pre;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item > .details > .values:not(:last-child)::after, #information > #linguistic-skills > article > .content:nth-child(2n) > .item > .details > .values:not(:last-child)::after {
+  content: ", ";
+  /* margin-left:-5px; */
+  white-space: pre;
+}
+#information > #technical-skills > article > .content:nth-child(2n) > .item > .details::after, #information > #linguistic-skills > article > .content:nth-child(2n) > .item > .details::after {
+  content: ")";
+  white-space: pre;
+}
+
+/* TODO: Investigate how to center last item(s): https://www.billerickson.net/css-grid-center-last-item/ */
+#information > #key-areas article > .item {
+  font-weight: 500;
+}
+
+#information > #education > article, #information > #professional-experience > article, #information > #internships > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+strong.contest {
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.certificate > .certificate-name {
+  font-weight: bold;
+}
+.certificate > .certificate-name::before {
+  white-space: pre;
+  margin-left: 5px;
+}
+.certificate > .certificate-name::after {
+  content: ":";
+  white-space: pre;
+  margin-right: 5px;
+}
+.certificate > .certificate-date::before {
+  content: " (";
+  white-space: pre;
+}
+.certificate > .certificate-date::after {
+  content: ")";
+  white-space: pre;
+}/*# sourceMappingURL=article.css.map */

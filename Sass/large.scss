@@ -1,0 +1,133 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px 25px;
+    & > .item {
+        flex: 1 1 auto; 
+        & + .item {
+            margin-left: 25px;
+            margin-top: 0px;
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+#information {
+    flex: 1 1 1000px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+#profile,
+#additional {
+    flex: 0 0 400px;
+    text-align: center;
+    & > .not-scrollable {
+        position: fixed;
+        width: 400px; // Apparently required
+    }
+    & > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: middle;
+        height: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+#name { margin-bottom: 10px; }
+
+#picture,
+#sought-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+#contact {
+    display: flex;
+    margin-top: 25px;
+    & > .nested {
+        display: inline-grid;
+        grid-template: repeat(6, auto) / repeat(2, auto);
+        grid-template-areas: 
+            "address-key       address-content      "
+            "email-key         email-content        "
+            "mobile-key        mobile-content       "
+            "mobility-key      mobility-content     "
+            "family-key        family-content       "
+            "miscellaneous-key miscellaneous-content" ;
+        row-gap: 5px;
+        width: 100%;
+    }
+}
+
+#sought-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & > div { margin-top: 0px; }
+}
+
+#availability { margin-top: 5px; }
+
+#interactive {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 25px;
+    & > div + div { margin-top: 20px; }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+#knowledge,
+#miscellaneous {
+    & > article {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        flex-wrap: wrap;
+        & > .item {
+            flex: 0 0 400px;
+            display: flex;
+            margin-left: 50px;
+            text-align: left;
+            &::before {
+                content: "\2022\00A0";
+                margin-top: -8px;
+                // white-space: pre;
+                font-size: 28px;
+                background: transparent;
+            }
+            & + .item { margin-top: 5px; }
+        }
+    }
+}
+
+#logo {
+    margin-top: auto;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    & > .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & + .item { margin-top: 25px; }
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Debug --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#targetedScreen::after { content:  "Above 1440 pixel wide screen "; }                          

@@ -1,0 +1,63 @@
+/* #information .item:hover article,
+#additional .item:hover article{
+    background-color:lightyellow;
+} */
+/* article:hover {
+    background-color: orange !important;
+} */
+article {
+  text-align: left;
+}
+article + article {
+  margin-top: 10px;
+}
+
+section + section {
+  margin-top: 20px;
+}
+
+#key-areas .container,
+#intrapersonal-skills .container,
+#interests .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+  grid-row-gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+#key-areas .container .item,
+#intrapersonal-skills .container .item,
+#interests .container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+}
+#key-areas .container .item > :nth-child(2),
+#intrapersonal-skills .container .item > :nth-child(2),
+#interests .container .item > :nth-child(2) {
+  font-style: italic;
+}
+#key-areas .container .item > :nth-child(2)::before,
+#intrapersonal-skills .container .item > :nth-child(2)::before,
+#interests .container .item > :nth-child(2)::before {
+  content: "(";
+}
+#key-areas .container .item > :nth-child(2)::after,
+#intrapersonal-skills .container .item > :nth-child(2)::after,
+#interests .container .item > :nth-child(2)::after {
+  content: ")";
+}
+
+/* https://www.billerickson.net/css-grid-center-last-item/ */
+#key-areas .container > .item {
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */

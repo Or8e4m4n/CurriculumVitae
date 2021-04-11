@@ -1,0 +1,179 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: auto; */
+    margin: 10px 25px;
+    & > .item {
+        flex: 1 1 auto;
+        display: flex;
+        width: 100%;
+        & + .item { margin-top: 25px; }
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Profile ------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#profile {
+    & > .nested {
+        flex: 0 0 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+        & > .item {
+            flex: 0 0 100%;
+            & + .item { margin-top: 10px; }
+        }
+    
+        & > #name { order: 0; }
+        & > #profession { order: 1; }
+        & > #picture {
+            flex: 0 1 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            order: 3;
+        }
+        & > #contact {
+            flex: 1 1 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 400px;
+            order: 2;
+            & > .nested {
+                display: inline-grid;
+                grid-template: repeat(3, auto) / repeat(4, auto);
+                grid-template-areas: 
+                    "address-key       address-content       address-content       address-content"
+                    "email-key         email-content         mobile-key            mobile-content "
+                    "mobility-key      mobility-content      family-key            family-content " ;
+                row-gap: 10px;
+            }
+        }
+
+        & > #address-content {
+            display: flex;
+            & > :not(:last-child)::after {
+                display: inline-block;
+                content: ""; // space added by the inline-block display
+            }
+        }
+
+        /* --------------------------------------------------------------------------------------------- */
+
+        & > #sought-position {
+            flex: 1 1 100%;
+            order: 4;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            & > div { align-items: center; }
+            & :first-child::after {
+                content: " ";
+                white-space: pre;
+            }
+        }
+
+        & > #availability {
+            flex: 1 1 100%;
+            width: 100%;
+            order: 5;
+        }
+
+        & > #interactive {
+            flex: 1 1 100%;
+            order: 6;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 250px);
+            grid-row-gap: 20px;
+            justify-content: space-around;
+            // & > #language {
+            //     // Dropdown Content (Hidden by Default)
+            //     & > .dropdown {
+            //         // display: none;
+            //         display: flex;
+            //         flex-direction: row;
+            //         justify-content: space-between;
+            //         padding-right: 25px;
+            //         width: 1000px;
+            //         background-color: purple;
+            //     }
+            // }
+        }
+    }
+}
+
+#language { align-self: center; }
+
+/* --------------------------------------------------------------------------------------------- */
+/* Information --------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#information {
+    display: flex;
+    flex-direction: column;
+    & > .item {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Additional ---------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#additional > .nested {
+    flex: 0 0 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    // justify-content: space-around;
+    text-align: center;
+    & > .item {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        // & > article {
+        //     display: flex;
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        //     justify-content: space-around;
+        //     & > .item + .item {
+        //         margin-left: 50px;
+        //     }
+        // }
+        & > article {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            justify-items: center;
+            align-items: center;
+        }
+    }
+    & #logo {
+        flex: 1 1 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 20px;
+        width: 100%;
+        &  > .item {
+            flex: 1 1 auto;
+            &:first-child { vertical-align: left; }
+        }
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Debug --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#targetedScreen::after { content:  "Below 1440 pixel wide screen "; }
+
+#interactive .button,
+#interactive .content { width: 200px; }

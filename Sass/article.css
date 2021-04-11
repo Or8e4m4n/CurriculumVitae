@@ -1,0 +1,88 @@
+/* #information .item:hover article,
+#additional .item:hover article{
+    background-color:lightyellow;
+} */
+/* article:hover {
+    background-color: orange !important;
+} */
+article {
+  text-align: left;
+  padding: 10px;
+  background-color: red;
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 5px 10px #EAEAEA;
+          box-shadow: 10px 5px 10px #EAEAEA;
+}
+article + article {
+  margin-top: 20px;
+}
+
+section + section {
+  margin-top: 20px;
+}
+
+#key-areas > article,
+#interpersonal-skills > article,
+#intrapersonal-skills > article,
+#interests > article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+  grid-row-gap: 10px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+#key-areas > article > .item,
+#interpersonal-skills > article > .item,
+#intrapersonal-skills > article > .item,
+#interests > article > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-weight: 500;
+  text-align: center;
+}
+#key-areas > article > .item > .details,
+#interpersonal-skills > article > .item > .details,
+#intrapersonal-skills > article > .item > .details,
+#interests > article > .item > .details {
+  background-color: red;
+  display: inline;
+  font-style: italic;
+}
+#key-areas > article > .item > .details::before,
+#interpersonal-skills > article > .item > .details::before,
+#intrapersonal-skills > article > .item > .details::before,
+#interests > article > .item > .details::before {
+  content: "(";
+}
+#key-areas > article > .item > .details::after,
+#interpersonal-skills > article > .item > .details::after,
+#intrapersonal-skills > article > .item > .details::after,
+#interests > article > .item > .details::after {
+  content: ")";
+}
+
+/* https://www.billerickson.net/css-grid-center-last-item/ */
+#key-areas article > .item {
+  font-weight: 500;
+}
+
+#education > article,
+#professional-experience > article,
+#internships > article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}/*# sourceMappingURL=article.css.map */

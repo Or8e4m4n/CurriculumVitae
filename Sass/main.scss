@@ -1,0 +1,170 @@
+article {
+    & > .role {
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 18px;
+    }
+    & > .description { margin-top: 5px; }
+    & > .organization,
+    & > .company {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 5px;
+        & > .description {
+            font-style: italic;
+            &:before {
+                content: " (";
+                white-space: pre;
+                margin-right: -5px;
+            }   
+            &::after {
+                content: ")";
+                white-space: pre;
+                margin-left: -5px;
+            }
+        }
+        & .localization {
+            display: flex;
+            & > :before {
+                content: "\00A0\2012\00A0";
+                white-space: pre;
+            }
+            & > .city + .country:before  { content: ", "; }
+        }
+    }
+    & > .project {
+        display: flex;
+        flex-direction: column;
+        & > .summary {
+            display: inline-flex;
+            flex-direction: row;
+            margin-top: 10px;
+            & > .key {
+                // background-color: red;
+                display: inline-block;
+                font-weight: 600;
+                text-align: right;
+                &::after {
+                    // background-color: green;
+                    //display: inline-block;
+                    // margin: -5px;
+                    //position: absolute;
+                    content: ": ";
+                    float: inline-end;
+                    white-space: pre;
+                    //white-space: nowrap;
+                }
+                // &:lang(en)::after{ margin-left: -5px; }
+            }
+            & > .content {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                & > div + div {
+                    &::before  {
+                        content: ", ";
+                        white-space: pre;
+                        margin-right: -5px;
+                    }
+                    // localisation
+                    &:last-child:lang(en)::before {
+                        content: " and ";
+                        white-space: pre;
+                        margin-right: -5px;
+                    }
+                    &:last-child:lang(de)::before {
+                        content: " und ";
+                        white-space: pre;
+                        margin-right: -5px;
+                    }
+                    &:last-child:lang(fr)::before {
+                        content: " et ";
+                        white-space: pre;
+                        margin-right: -5px;
+                    }
+                    &:last-child:lang(ru)::before {
+                        content: " и ";
+                        white-space: pre;
+                        margin-right: -5px;
+                    }
+                }
+            }
+        }
+        & > .details > .item {
+            display: flex;
+            margin-left: 50px;
+            margin-top: 5px;
+            text-align: left;
+            &::before {
+                content: "\2022\00A0";
+                margin-top: -8px;
+                // white-space: pre;
+                font-size: 28px;
+                background: transparent;
+            }
+        }
+    }
+}
+
+
+/* --------------------------------------------------------------------------------------------- */
+
+.periods {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.period {
+    display: flex;
+    margin-left: auto;
+    & > .from + .to::before {
+        content: "\00A0\2010\00A0";
+        white-space: pre;
+        margin-right: -5px;
+    }
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+.customer,
+.employer {
+    & > a {
+        text-decoration: none; /* Remove links appearance*/
+        color: inherit;
+    }
+}
+
+.company {
+    //background-color: cyan;
+    & > .description {
+        font-style: italic;
+        &::before {
+            content: "xx (";
+            white-space: pre;
+            margin-right: -5px;
+        }
+        &::after {
+            content: ") ";
+            white-space: pre;
+            margin-left: -5px;
+        }
+    }
+    & > .contract { display: none; }
+}
+
+.customer + .employer {
+    display: inline;
+    font-style: italic;
+    // background-color: yellow;
+    &::before{
+        content: "(";
+        margin-right: -5px;
+    }
+    &::after{
+        content: ")";
+        margin-left: -5px;
+    }
+}

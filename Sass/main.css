@@ -1,0 +1,188 @@
+@charset "UTF-8";
+article > .role {
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+article > .description {
+  margin-top: 5px;
+}
+article > .organization, article > .company {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin-top: 5px;
+}
+article > .organization > .description, article > .company > .description {
+  font-style: italic;
+}
+article > .organization > .description:before, article > .company > .description:before {
+  content: " (";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .organization > .description::after, article > .company > .description::after {
+  content: ")";
+  white-space: pre;
+  margin-left: -5px;
+}
+article > .organization .localization, article > .company .localization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+article > .organization .localization > :before, article > .company .localization > :before {
+  content: " ‒ ";
+  white-space: pre;
+}
+article > .organization .localization > .city + .country:before, article > .company .localization > .city + .country:before {
+  content: ", ";
+}
+article > .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+article > .project > .summary {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 10px;
+}
+article > .project > .summary > .key {
+  display: inline-block;
+  font-weight: 600;
+  text-align: right;
+}
+article > .project > .summary > .key::after {
+  content: ": ";
+  float: inline-end;
+  white-space: pre;
+}
+article > .project > .summary > .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+article > .project > .summary > .content > div + div::before {
+  content: ", ";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .project > .summary > .content > div + div:last-child:lang(en)::before {
+  content: " and ";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .project > .summary > .content > div + div:last-child:lang(de)::before {
+  content: " und ";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .project > .summary > .content > div + div:last-child:lang(fr)::before {
+  content: " et ";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .project > .summary > .content > div + div:last-child:lang(ru)::before {
+  content: " и ";
+  white-space: pre;
+  margin-right: -5px;
+}
+article > .project > .details > .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 50px;
+  margin-top: 5px;
+  text-align: left;
+}
+article > .project > .details > .item::before {
+  content: "• ";
+  margin-top: -8px;
+  font-size: 28px;
+  background: transparent;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.periods {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: auto;
+}
+
+.period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+}
+.period > .from + .to::before {
+  content: " ‐ ";
+  white-space: pre;
+  margin-right: -5px;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.customer > a,
+.employer > a {
+  text-decoration: none;
+  /* Remove links appearance*/
+  color: inherit;
+}
+
+.company > .description {
+  font-style: italic;
+}
+.company > .description::before {
+  content: "xx (";
+  white-space: pre;
+  margin-right: -5px;
+}
+.company > .description::after {
+  content: ") ";
+  white-space: pre;
+  margin-left: -5px;
+}
+.company > .contract {
+  display: none;
+}
+
+.customer + .employer {
+  display: inline;
+  font-style: italic;
+}
+.customer + .employer::before {
+  content: "(";
+  margin-right: -5px;
+}
+.customer + .employer::after {
+  content: ")";
+  margin-left: -5px;
+}/*# sourceMappingURL=main.css.map */

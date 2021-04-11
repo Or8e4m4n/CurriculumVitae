@@ -1,0 +1,63 @@
+#profile {
+    & > .nested {
+        & > #picture { display: none; }
+        & > #contact {
+            & > .nested {
+                display: inline-grid;
+                grid-template: repeat(3, auto) / repeat(4, auto);
+                grid-template-areas: 
+                    "address-key  address-content "
+                    "email-key    email-content   "
+                    "mobile-key   mobile-content  "
+                    "mobility-key mobility-content"
+                    "family-key   family-content  ";
+                row-gap: 5px;
+                & > #address-content {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        & > #sought-position {
+            display: flex;
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        & > #availability { margin-top: 5px; }
+        & > #interactive { margin-top: 20px; }
+    }
+}
+
+#information {
+    & > #technical-skills,
+    & > #linguistic-skills{
+        & > article {
+            display: flex;
+            flex-direction: column;
+            & > .key {
+                display: flex;
+                margin-left: 50px;
+                text-align: left;
+                &::after { content: ""; }
+                &::before { 
+                    content: "\2022\00A0";
+                    margin-top: -8px;
+                    // white-space: pre;
+                    font-size: 28px;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+#additional{
+    display: flex;
+    flex-direction: column;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Debug --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+#targetedScreen::after { content: "Below 662 pixel wide screen "; }

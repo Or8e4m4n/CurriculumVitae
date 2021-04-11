@@ -1,0 +1,148 @@
+
+/* .container .container > .item {
+    background-color: purple;
+} */
+
+/* .container .container .container > .item {
+    background-color: rebeccapurple;
+} */
+
+/* .container .container .container .container > .item {
+    background-color: violet;
+} */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* #profile {
+    background-color: lime;
+} */
+
+/* #contact {
+    background-color: lightseagreen;
+} */
+
+/* #name {
+    background-color: cyan;
+} */
+
+/* #profession {
+    background-color: bisque;
+} */
+
+/* #picture {
+    background-color: lime;
+} */
+
+/* #contact {
+    background-color: lime;
+} */
+
+/* #address > .container {
+    background-color: lime;
+} */
+
+/* #address > .container > .item:first-child {
+    background-color: yellow;
+} */
+
+/* #address > .container > .item:last-child {
+    background-color: orange;
+} */
+
+/* #mobile {
+    background-color: red;
+} */
+
+/* #profile #sought-position > .container > .item:first-child {
+    background-color: yellow;
+} */
+
+/* #sought-position > .container > .item:last-child {
+    background-color: orange;
+} */
+
+/* #language {
+    background-color: burlywood;
+} */
+
+/* #donwload {
+    background-color: red;
+} */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* #information {
+    background-color: yellow;
+}
+ */
+/* #experience {
+    background-color: purple;
+} */
+
+/* #internship {
+    background-color: pink;
+} */
+
+/* #language {
+    background-color: sandybrown;
+} */
+
+/* #key-areas .container,
+#intrapersonal-skills .container,
+#interests .container {
+    background-color: lime;
+} */
+
+/* #key-areas .container > .item,
+#intrapersonal-skills .container > .item,
+#interests .container > .item {
+    background-color: aqua;
+} */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* #additional {
+    background-color: magenta;
+} */
+
+/* #miscellaneous {
+    background-color: lime;
+} */
+
+/* #knowledge {
+    background-color: aquamarine;
+} */
+
+/* .role {
+    background-color: magenta;
+} */
+
+/* .organization{
+    background-color: violet;
+} */
+
+/* .employer {
+    background-color: lime;
+} */
+
+/* .customer {
+    background-color: yellow;
+} */
+
+/* .project {
+    background-color: coral;
+} */
+
+/* .details {
+    background-color: gold;
+} */
+
+/* #contact > .container > :nth-child(2n + 1):after {
+    content: ":\00A0";
+} */
+
+/* --------------------------------------------------------------------------------------------- */
+
+/* #knowledge .container > .item {
+    background-color: crimson;
+} */

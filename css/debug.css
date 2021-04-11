@@ -1,0 +1,99 @@
+/* --------------------------------------------------------------------------------------------- */
+/* Debug --------------------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+/* body > div.container{
+    border: none;
+}
+
+.container {
+    outline: 2px solid yellow;
+}
+
+.container .container {
+    outline: 2px solid orange;
+    }
+
+.container .container .container {
+    outline: 2px solid orangered;
+} */
+
+/* .container .container .container .container {
+    outline: 2px solid red;
+} */
+
+#profile > .container,
+#information > .container,
+#additional > .container {
+    outline: 2px solid black;
+}
+
+#name,
+#profession,
+#picture,
+#contact,
+#sought-position,
+#availability,
+#interactive,
+#openclassrooms {
+    outline: 2px solid red;
+}
+
+section {
+    outline: 2px solid blue;
+}
+
+article {
+    outline: 2px solid lime;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* Miscellaneous debug ------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+
+/* Targeted screen sizes (debug) */
+#targetedScreen {
+    display: block;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+#targetedScreen::before {
+    content: "Targeted resolution: ";
+    font-weight: 600;
+}
+
+/* Default flex properties when the screen width is above 1440 pixels */
+#targetedScreen::after {
+    content: "None ";
+}
+
+#screenInformation {
+    display: block;
+    left: 50%;
+    bottom: 0px;
+}
+
+#viewportSizes {
+    display: block;
+    right: 0%;
+    bottom: 0px;
+}
+
+.debug {
+    display: inline;
+    position: fixed;
+    background-color: yellow;
+    outline: 2px solid black;
+    white-space: nowrap;
+}
+
+.debug .list {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.debug .list .item {
+    margin-bottom: 0px;
+}
